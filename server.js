@@ -10,9 +10,66 @@ app.set('view engine', 'handlebars');
 
 app.get('/', function(req, res){
   res.render('body', {
+    showNavbar: true,
     showFilter: true,
     showModal: true
   });
+});
+
+app.get('/google', function(req, res){
+  res.render('google', {
+    showNavbar: true,
+    showFilter: false,
+    showModal: false
+  })
+});
+
+app.get('/youtube', function(req, res){
+  res.render('youtube', {
+    showNavbar: true,
+    showFilter: false,
+    showModal: false
+  })
+});
+
+app.get('/twitch', function(req, res){
+  res.render('twitch', {
+    showNavbar: true,
+    showFilter: false,
+    showModal: false
+  })
+});
+
+app.get('/facebook', function(req, res){
+  res.render('facebook', {
+    showNavbar: true,
+    showFilter: false,
+    showModal: false
+  })
+});
+
+app.get('/moon', function(req, res){
+  res.render('moon', {
+    showNavbar: false,
+    showFilter: false,
+    showModal: false
+  })
+});
+
+app.get('/zen', function(req, res){
+  res.render('zen', {
+    showNavbar: false,
+    showFilter: false,
+    showModal: false
+  })
+});
+
+app.get('/skywalker', function(req, res){
+  res.render('skywalker', {
+    showNavbar: false,
+    showFilter: false,
+    showModal: false
+  })
 });
 
 app.use(express.static('public'));

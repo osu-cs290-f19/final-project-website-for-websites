@@ -1,7 +1,11 @@
 <nav class="navbars">
   <ul class="navlists">
     <li class="navitem"><a href="/">Categories</a></li>
-    <li class="navitem" id="create-new-post">New post</li>
-    <li class="navitem" id="filter-input-container">Search post</li>
+    {{#if showModal}}
+      <li class="navitem" id="create-new-post">New post</li>
+    {{/if}}
+    {{#if showFilter}}
+      <li class="navitem" id="filter-input-container">Search post</li>
+    {{/if}}
   </ul>
 </nav>
