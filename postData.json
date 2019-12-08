@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Look at this cool search engine",
+    "link": "www.google.com",
+    "poster": "Jerry",
+    "category": "SearchEngines",
+    "comments":
+      [
+        "dammit jerry",
+        "wow Jerry, this is so interesting. Did you just find out about America as well?",
+        "I heard that they mine your data. Good on them for finding a way to provide a service for free."
+      ]
+  },
+  {
+    "title": "You can buy anything at this site! You should go buy stuff!",
+    "link": "www.amazon.com",
+    "poster": "Jeff Bezos",
+    "category": "Shopping",
+    "comments":
+      [
+        "Even I think you're a nerd. -Bill Gates",
+        "Blue Origin sucks. Start a real space company. -Elon Musk",
+      ]
+  },
+  {
+    "title": "This is like Amazon but cheaper",
+    "link": "www.aliexpress.com",
+    "poster": "your mom",
+    "category": "Shopping",
+    "comments":
+      [
+        "day 455 of waiting for my watch to be delivered: I wonder what time it is...",
+      ]
+  },
+  {
+    "title": "This has helped me more than you can imagine",
+    "link": "https://darksouls3.wiki.fextralife.com/Dark+Souls+3+Wiki",
+    "poster": "High Lord Mayor of Anor Londo",
+    "category": "Wikis",
+    "comments":
+      [
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud",
+        "Git Gud"
+      ]
+  },
+  {
+    "title": "Objectively the better social media",
+    "link": "www.reddit.com",
+    "poster": "everyone",
+    "category": "SocialMedia",
+    "comments":
+      [
+        "use Pinterest like a real man",
+      ]
+  },
+  {
+    "title": "This site has hilarious skits. Gimme 7 dollars and you can visit it",
+    "link": "doormonster.tv",
+    "poster": "Extortionist Hobo",
+    "category": "Entertainment",
+    "comments":
+      [
+
+      ]
+  },
+  {
+    "title": "",
+    "link": "",
+    "poster": "",
+    "category": "",
+    "comments":
+      [
+        "",
+        "",
+        ""
+      ]
+  }
+]
