@@ -9,7 +9,8 @@
       so, every post should be listening for a click.
       when one is clicked, it should send a link that has /posts/<postnum> where <postnum> is the index of the post that was clicked (not sure how to get the client side to know this...)
       then, the server catches that request, and renders a page with only that item of the array (using a slightly different template)
-      </fieldset>
+
+      actually, this might not work at all since the client can't see the index of a particular post
     -->
     <p class="post-title">{{title}}</p>
   </div>

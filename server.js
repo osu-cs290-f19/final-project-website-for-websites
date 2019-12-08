@@ -6,6 +6,8 @@ var app = express();
 var port = process.env.PORT || 3000;
 
 var postDataArray = require('./postData');
+//I need to figure out which things are selected, then require those files, and push the arrays I get from those onto postDataArray
+
 
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');

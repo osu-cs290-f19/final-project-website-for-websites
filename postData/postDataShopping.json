@@ -1,0 +1,23 @@
+[
+  {
+    "category": "Shopping",
+    "title": "You can buy anything at this site! You should go buy stuff!",
+    "link": "https://www.amazon.com",
+    "poster": "Jeff Bezos",
+    "comments":
+      [
+        "Even I think you're a nerd. -Bill Gates",
+        "Blue Origin sucks. Start a real space company. -Elon Musk"
+      ]
+  },
+  {
+    "category": "Shopping",
+    "title": "This is like Amazon but cheaper",
+    "link": "https://www.aliexpress.com",
+    "poster": "your mom",
+    "comments":
+      [
+        "day 455 of waiting for my watch to be delivered: I wonder what time it is..."
+      ]
+  }
+]
