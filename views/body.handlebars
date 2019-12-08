@@ -5,7 +5,11 @@
 {{/if}}
 
 <main class="content">
-  {{> posts}}
+  <section id="posts">
+    {{#each postDataKey}}
+      {{> posts}}
+    {{/each}}
+  </section>
 </main>
 
 {{#if showModal}}

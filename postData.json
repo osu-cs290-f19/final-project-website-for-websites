@@ -1,9 +1,9 @@
 [
   {
-    "title": "Look at this cool search engine",
-    "link": "www.google.com",
-    "poster": "Jerry",
     "category": "SearchEngines",
+    "title": "Look at this cool search engine",
+    "link": "https://www.google.com/",
+    "poster": "Jerry",
     "comments":
       [
         "dammit jerry",
@@ -12,31 +12,31 @@
       ]
   },
   {
-    "title": "You can buy anything at this site! You should go buy stuff!",
-    "link": "www.amazon.com",
-    "poster": "Jeff Bezos",
     "category": "Shopping",
+    "title": "You can buy anything at this site! You should go buy stuff!",
+    "link": "https://www.amazon.com",
+    "poster": "Jeff Bezos",
     "comments":
       [
         "Even I think you're a nerd. -Bill Gates",
-        "Blue Origin sucks. Start a real space company. -Elon Musk",
+        "Blue Origin sucks. Start a real space company. -Elon Musk"
       ]
   },
   {
-    "title": "This is like Amazon but cheaper",
-    "link": "www.aliexpress.com",
-    "poster": "your mom",
     "category": "Shopping",
+    "title": "This is like Amazon but cheaper",
+    "link": "https://www.aliexpress.com",
+    "poster": "your mom",
     "comments":
       [
-        "day 455 of waiting for my watch to be delivered: I wonder what time it is...",
+        "day 455 of waiting for my watch to be delivered: I wonder what time it is..."
       ]
   },
   {
+    "category": "Wikis",
     "title": "This has helped me more than you can imagine",
     "link": "https://darksouls3.wiki.fextralife.com/Dark+Souls+3+Wiki",
     "poster": "High Lord Mayor of Anor Londo",
-    "category": "Wikis",
     "comments":
       [
         "Git Gud",
@@ -52,30 +52,30 @@
       ]
   },
   {
-    "title": "Objectively the better social media",
-    "link": "www.reddit.com",
-    "poster": "everyone",
     "category": "SocialMedia",
+    "title": "Objectively the better social media",
+    "link": "https://www.reddit.com",
+    "poster": "everyone",
     "comments":
       [
-        "use Pinterest like a real man",
+        "use Pinterest like a real man"
       ]
   },
   {
-    "title": "This site has hilarious skits. Gimme 7 dollars and you can visit it",
-    "link": "doormonster.tv",
-    "poster": "Extortionist Hobo",
     "category": "Entertainment",
+    "title": "This site has hilarious skits. Gimme 7 dollars and you can visit it",
+    "link": "https://doormonster.tv",
+    "poster": "Extortionist Hobo",
     "comments":
       [
-
+        ""
       ]
   },
   {
+    "category": "",
     "title": "",
     "link": "",
     "poster": "",
-    "category": "",
     "comments":
       [
         "",

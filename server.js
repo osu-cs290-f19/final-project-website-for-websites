@@ -5,6 +5,8 @@ var exphbs = require('express-handlebars');
 var app = express();
 var port = process.env.PORT || 3000;
 
+var postDataArray = require('./postData');
+
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
@@ -12,11 +14,12 @@ app.get('/', function(req, res){
   res.render('body', {
     showNavbar: true,
     showFilter: true,
-    showModal: true
+    showModal: true,
+    postDataKey: postDataArray
   });
 });
 
-app.get('/google', function(req, res){
+/*app.get('/google', function(req, res){
   res.render('google', {
     showNavbar: true,
     showFilter: false,
@@ -70,7 +73,7 @@ app.get('/skywalker', function(req, res){
     showFilter: false,
     showModal: false
   })
-});
+});*/
 
 app.use(express.static('public'));
 

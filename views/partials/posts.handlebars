@@ -1,6 +1,27 @@
-<section id="posts">
+<div class="post" category="{{category}}">
+  <div class="post-link">
+    <!-- <a href="/facebook" class="post-title">Best Social Media Webs</a> -->
+    <!--
+      ok, so later we'll have to make the post title a link, but we don't want a file for every site.
+      so, what we'll do is we'll have the title send you to page where only one item is loaded from the posts array that we got from the postData file
+      we'll need to use a different partial template (to include the comments) but otherwise it shouldn't be much different from the main page.
 
-  <div class="post" category="search-web">
+      so, every post should be listening for a click.
+      when one is clicked, it should send a link that has /posts/<postnum> where <postnum> is the index of the post that was clicked (not sure how to get the client side to know this...)
+      then, the server catches that request, and renders a page with only that item of the array (using a slightly different template)
+      </fieldset>
+    -->
+    <p class="post-title">{{title}}</p>
+  </div>
+  <div class="direct-link">
+    <a href="{{link}}" target="_blank" class="link">{{link}}</a>
+  </div>
+  <div class="poster-link">
+    <a href="#" class="poster">By: {{poster}}</a>
+  </div>
+</div>
+
+  <!-- <div class="post" category="search-web">
     <div class="post-link">
       <a href="/google" class="post-title">Best Searching Webs</a>
     </div>
@@ -46,6 +67,4 @@
     <div class="poster-link">
       <a href="/skywalker" class="poster">By: Skywalker</a>
     </div>
-  </div>
-
-</section>
+  </div> -->
