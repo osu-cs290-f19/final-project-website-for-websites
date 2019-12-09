@@ -17,6 +17,7 @@ app.get('/', function(req, res){
     showNavbar: true,
     showFilter: true,
     showModal: true,
+    showCategModal: true,
     postDataKey: postDataArray
   });
 });
