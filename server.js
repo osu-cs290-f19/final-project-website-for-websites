@@ -21,6 +21,22 @@ app.get('/', function(req, res){
   });
 });
 
+app.get('/posts/:postID', function(req, res, next){
+  var postID = req.params.postID;
+  if(postDataArray[postID]){
+    res.render('body',{
+      showNavbar: false,
+      showFilter: false,
+      postDataKey: [postDataArray[postID]],
+      showModal: false
+    })
+  }
+  else {
+    next();
+  }
+})
+
+
 /*app.get('/google', function(req, res){
   res.render('google', {
     showNavbar: true,
