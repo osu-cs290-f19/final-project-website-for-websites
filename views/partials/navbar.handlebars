@@ -1,6 +1,8 @@
 <nav class="navbars">
   <ul class="navlists">
-    <li class="navitem"><a href="/">Categories</a></li>
+    {{#if showCategModal}}
+      <li class="navitem" id=show-categories>Categories</li>
+    {{/if}}
     {{#if showModal}}
       <li class="navitem" id="create-new-post">New post</li>
     {{/if}}
