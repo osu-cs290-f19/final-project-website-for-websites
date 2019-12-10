@@ -53,18 +53,18 @@ app.get('/', function(req, res){
 
   for(i in req.params)
   {
-    conosle.log("req.params[i] = ", req.params[i]);
+    /*conosle.log("req.params[i] = ", req.params[i]);
     conosle.log("req.params[i].key = ", req.params[i].key);
     conosle.log("req.params[i].value = ", req.params[i].value);
     conosle.log("validCategories.req.params[i].key = ", validCategories.req.params[i].key);
-    conosle.log("validCategories.req.params[i].key.value = ", validCategories.req.params[i].key.value);
+    conosle.log("validCategories.req.params[i].key.value = ", validCategories.req.params[i].key.value);*/
     if(req.params[i].value == true)
       validCategories.req.params[i].key = true;
     else
       validCategories.req.params[i].key = false;
   }
 
-  console.log("validCategories = ", validCategories);
+  //console.log("validCategories = ", validCategories);
 
   res.render('body', {
     showNavbar: true,
