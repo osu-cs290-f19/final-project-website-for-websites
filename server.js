@@ -5,6 +5,19 @@ var exphbs = require('express-handlebars');
 var app = express();
 var port = process.env.PORT || 3000;
 
+var validCategories =
+{
+  SearchEngines: true,
+  Shoppingl: true,
+  Games: true,
+  SocialMedia: true,
+  Educational: true,
+  Interesting: false,
+  StreamingSites: true,
+  Wikis: false,
+  Funny: false
+}
+
 var postDataArray = require('./postData');
 //I need to figure out which things are selected, then require those files, and push the arrays I get from those onto postDataArray
 
@@ -12,7 +25,47 @@ var postDataArray = require('./postData');
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
+var i = 0;
+var j = 0;
+
 app.get('/', function(req, res){
+
+  //var urlParams = new URLSearchParams(window.location.search);
+  /*var keys = [];
+  for(i in req.query)
+  {
+    keys.push(i.keys());
+    if(i == true)
+
+  }
+
+  for (i in req.query)
+  {
+    req.query[i] == false;
+    for(j in postDataArray)
+    {
+      if(postDataArray[j].category == keys[i])
+        postDataArray.splice(j, 1);
+    }
+  }*/
+
+  console.log("req.params = ", req.params);
+
+  for(i in req.params)
+  {
+    conosle.log("req.params[i] = ", req.params[i]);
+    conosle.log("req.params[i].key = ", req.params[i].key);
+    conosle.log("req.params[i].value = ", req.params[i].value);
+    conosle.log("validCategories.req.params[i].key = ", validCategories.req.params[i].key);
+    conosle.log("validCategories.req.params[i].key.value = ", validCategories.req.params[i].key.value);
+    if(req.params[i].value == true)
+      validCategories.req.params[i].key = true;
+    else
+      validCategories.req.params[i].key = false;
+  }
+
+  console.log("validCategories = ", validCategories);
+
   res.render('body', {
     showNavbar: true,
     showFilter: true,
