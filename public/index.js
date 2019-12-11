@@ -116,16 +116,16 @@ function applyNewCategories()
   var cats = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false']
 
 
-  console.log("applying new categories");
+  //console.log("applying new categories");
 
   var desCateg = document.getElementsByClassName('categ-option');
 
-  console.log("desCateg = ", desCateg);
+  //console.log("desCateg = ", desCateg);
 
   for(i = 0; i < desCateg.length; i++)
   {
-    console.log("desCateg[i] = ", desCateg[i]);
-    console.log("desCateg[i].checked = ", desCateg[i].checked);
+    //console.log("desCateg[i] = ", desCateg[i]);
+    //console.log("desCateg[i].checked = ", desCateg[i].checked);
     if(desCateg[i].checked)
     {
       cats[i] = 'true';
@@ -234,7 +234,7 @@ window.addEventListener('DOMContentLoaded', function ()
     allPosts.push(parsePostElem(postElems[i]));
   }
 
-  console.log("allPosts = ", allPosts);
+  //console.log("allPosts = ", allPosts);
 
   //insert modal event listeners
   var insertButton = document.getElementById('create-new-post');
@@ -284,6 +284,25 @@ window.addEventListener('DOMContentLoaded', function ()
   var categHideButtons = document.getElementsByClassName('modal-hide-button');
   for (var i = 0; i < categHideButtons.length; i++) {
     categHideButtons[i].addEventListener('click', hideCategModal);
+  }
+
+
+  //comment posting event listeners
+  var postComment = document.getElementsByClassName('post-comment-button');
+  for (var i = 0; i < postComment.length; i++)
+  {
+    //console.log("adding listener...");
+    postComment[i].addEventListener('click', function (event)
+    {
+      var relevantPost = event.currentTarget.parentElement.parentElement;
+      //console.log("relevantPost = ", relevantPost);
+      var text = relevantPost.querySelector('#new-comment').value.trim();
+      //console.log("text = ", text);
+
+      relevantPost.insertAdjacentHTML('beforebegin', '<div class="comment-container"><p class="actual-comment">' + text + '</p></div>');
+      relevantPost.querySelector('#new-comment').value = "";
+    });
+    //console.log("listener added");
   }
 });
 
