@@ -8,7 +8,7 @@ function insertNewPost(postCateg, postTitle, postLink, postPoster/*, postComment
   };
 
   //console.log("postContext = ", postContext);
-  var postHTML = Handlebars.templates.postHandleFile(postContext);
+  var postHTML = Handlebars.templates.posts(postContext);
   //console.log("postHTML = ", postHTML);
 
   var postList = document.getElementById('posts');
@@ -54,10 +54,60 @@ function handleModalInsert()
   }
 }
 
+function postPassesFilters(post, filters) {
+
+  if(filters.type == "title"){
+    if (filters.text) {
+      var postSearchText = post.title.toLowerCase();
+      var filterText = filters.text.toLowerCase();
+      if (postSearchText.indexOf(filterText) === -1) {
+        return false;
+      }
+    }
+  }
+
+  if(filters.type == "link"){
+    if (filters.text) {
+      var postSearchText = post.link.toLowerCase();
+      var filterText = filters.text.toLowerCase();
+      if (postSearchText.indexOf(filterText) === -1) {
+        return false;
+      }
+    }
+  }
+
+  if(filters.type == "poster"){
+    if (filters.text) {
+      var postSearchText = post.poster.toLowerCase();
+      var filterText = filters.text.toLowerCase();
+      if (postSearchText.indexOf(filterText) === -1) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+
+}
 
 function handleModalFilter()
 {
-  hideFilterModal();
+
+  var filters = {
+    text: document.getElementById('search-text-input').value.trim(),
+    type: document.querySelectorAll("#post-condition-fieldset input:checked")[0].value
+  }
+
+  var postContainer = document.getElementById('posts');
+  while(postContainer.lastChild){
+    postContainer.removeChild(postContainer.lastChild);
+  }
+
+  allPosts.forEach(function (post){
+    if(postPassesFilters(post, filters)) {
+      insertNewPost(post.category, post.title, post.link, post.poster, post.comments);
+    }
+  });
 }
 
 
@@ -199,7 +249,7 @@ window.addEventListener('DOMContentLoaded', function ()
     searchButton.addEventListener('click', showFilterModal);
   }
 
-  var searchAcceptButton = document.getElementById('modal-accept');
+  var searchAcceptButton = document.getElementById('filter-modal-accept');
   if (searchAcceptButton) {
     searchAcceptButton.addEventListener('click', handleModalFilter);
   }
