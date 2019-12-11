@@ -20,6 +20,21 @@
   <div class="poster-link">
     <a href="#" class="poster">By: {{poster}}</a>
   </div>
+  <div class="post-comments">
+    <p id="comments-intro">COMMENTS</p>
+    {{#each comments}}
+      <div class="comment-container">
+        <!--<p>look at me</p>-->
+        <p class="actual-comment">{{this}}</p>
+      </div>
+    {{/each}}
+    <div class="add-comment">
+      <label for="new-comment" class="new-comment-label">post comment</label>
+      <div class="new-comment-element">
+        <input type="text" name="new-comment" id="new-comment" class="comment-input">
+      </div>
+    </div>
+  </div>
 </div>
 
   <!-- <div class="post" category="search-web">
