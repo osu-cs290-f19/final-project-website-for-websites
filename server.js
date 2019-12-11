@@ -8,17 +8,18 @@ var port = process.env.PORT || 3000;
 var validCategories =
 {
   SearchEngines: true,
-  Shoppingl: true,
+  Shopping: true,
   Games: true,
   SocialMedia: true,
   Educational: true,
-  Interesting: false,
+  Interesting: true,
   StreamingSites: true,
-  Wikis: false,
-  Funny: false
+  Wikis: true,
+  Funny: true
 }
 
-var postDataArray = require('./postData');
+var postDataArrayAll = require('./postData');
+postDataArray = postDataArrayAll;
 //I need to figure out which things are selected, then require those files, and push the arrays I get from those onto postDataArray
 
 
@@ -30,41 +31,53 @@ var j = 0;
 
 app.get('/', function(req, res){
 
-  //var urlParams = new URLSearchParams(window.location.search);
-  /*var keys = [];
+  console.log("got a new request");
+  postDataArray = postDataArrayAll;
+
+  //var thing;
+
   for(i in req.query)
-  {
-    keys.push(i.keys());
-    if(i == true)
-
-  }
-
-  for (i in req.query)
-  {
-    req.query[i] == false;
-    for(j in postDataArray)
-    {
-      if(postDataArray[j].category == keys[i])
-        postDataArray.splice(j, 1);
-    }
-  }*/
-
-  console.log("req.params = ", req.params);
-
-  for(i in req.params)
   {
     /*conosle.log("req.params[i] = ", req.params[i]);
     conosle.log("req.params[i].key = ", req.params[i].key);
     conosle.log("req.params[i].value = ", req.params[i].value);
     conosle.log("validCategories.req.params[i].key = ", validCategories.req.params[i].key);
     conosle.log("validCategories.req.params[i].key.value = ", validCategories.req.params[i].key.value);*/
-    if(req.params[i].value == true)
-      validCategories.req.params[i].key = true;
+    //thing = req.query[i].key
+    console.log("i = ", i);
+    console.log("req.query[i] = ", req.query[i]);
+    //console.log("req.query[i].key = ", req.query[i].key);
+    console.log("validCategories.SearchEngines = ", validCategories.SearchEngines);
+    console.log("validCategories[i] = ", validCategories[i]);
+    if(req.query[i] == 'true')
+    {
+      console.log("req.query[i] = (should be true) ", req.query[i]);
+      validCategories[i] = true;
+    }
     else
-      validCategories.req.params[i].key = false;
+    {
+      console.log("req.query[i] = (should be false)", req.query[i]);
+      validCategories[i] = false;
+    }
   }
 
-  //console.log("validCategories = ", validCategories);
+  console.log("validCategories = ", validCategories);
+  console.log("postDataArray[0] = ", postDataArray[0]);
+
+  var thing2;
+  for(i = postDataArray.length - 1; i > -1; i--)
+  {
+    console.log("i = ", i);
+    console.log("postDataArray[i] = ", postDataArray[i]);
+    console.log("postDataArray[i].category = ", postDataArray[i].category);
+    thing2 = postDataArray[i].category;
+    //console.log("thing = ", thing);
+    console.log("validCategories = ", validCategories);
+    console.log("thing2 = ", thing2);
+    console.log("validCategories[thing2] = ", validCategories[thing2]);
+    if(!validCategories[thing2])
+      postDataArray.splice(i, 1);
+  }
 
   res.render('body', {
     showNavbar: true,
@@ -73,6 +86,8 @@ app.get('/', function(req, res){
     showCategModal: true,
     postDataKey: postDataArray
   });
+
+  console.log("postDataArray[0] = ", postDataArray[0]);
 });
 
 app.get('/posts/:postID', function(req, res, next){

@@ -63,7 +63,29 @@ function handleModalFilter()
 
 function applyNewCategories()
 {
+  var cats = [false, false, false, false, false, false, false, false, false]
+
+
   console.log("applying new categories");
+
+  var desCateg = document.getElementsByClassName('categ-option');
+
+  console.log("desCateg = ", desCateg);
+
+  for(i = 0; i < desCateg.length; i++)
+  {
+    //console.log("desCateg[i] = ", desCateg[i]);
+    //console.log("desCateg[i].checked = ", desCateg[i].checked);
+    if(desCateg[i].checked)
+    {
+      cats[i] = true;
+    }
+  }
+
+  var request = new XMLHttpRequest();
+  var requestURL = '/?' + 'searchEngines=' + cats[0] + '&shopping=' + cats[1] + '&games=' + cats[2] + '&socialMedia=' + cats[3] + '&educational=' + cats[4] + '&interesting=' + cats[5] + '&streamingSites=' + cats[6] + '&wikis=' + cats[7] + '&funny=' + cats[8];
+  request.open('GET', requestURL);
+  request.send();
 }
 
 function showInsertModal()
@@ -152,6 +174,8 @@ window.addEventListener('DOMContentLoaded', function ()
     allPosts.push(parsePostElem(postElems[i]));
   }
 
+  console.log("allPosts = ", allPosts);
+
   //insert modal event listeners
   var insertButton = document.getElementById('create-new-post');
   if (insertButton) {
@@ -194,7 +218,7 @@ window.addEventListener('DOMContentLoaded', function ()
 
   var categApplyButton = document.getElementById('categ-modal-accept');
   if (categApplyButton) {
-    categApplyButton.addEventListener('click', showCategModal);
+    categApplyButton.addEventListener('click', applyNewCategories);
   }
 
   var categHideButtons = document.getElementsByClassName('modal-hide-button');
