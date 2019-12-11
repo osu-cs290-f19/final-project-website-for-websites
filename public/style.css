@@ -246,7 +246,7 @@ background-color: #FFFFF0;
 padding:20px;
 max-width: 300px;
 height: 265px;
-bottom: 455px;
+bottom: 100px;
 
 border-style: solid;
 border-width: thick;
@@ -370,7 +370,7 @@ box-shadow:4px 4px 7px #FF7F50;
   padding:20px;
   max-width: 300px;
   height: 265px;
-  bottom: 455px;
+  bottom: 100px;
 
   border-style: solid;
   border-width: thick;
@@ -473,7 +473,7 @@ box-shadow:4px 4px 7px #FF7F50;
   padding:20px;
   max-width: 300px;
   min-height: 295px;
-  bottom: 362.5px;
+  bottom: 13px;
 
   border-style: solid;
   border-width: thick;
