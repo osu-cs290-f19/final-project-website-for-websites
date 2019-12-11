@@ -12,33 +12,34 @@
       <div id="category-types"  class="post-input-element">
         <fieldset id="category-selection-fieldset" class="post-fieldset"><!--what does the class post-fieldset do?-->
           <div>
-            <input class="categ-option" type="checkbox" name="category-type" id="search-engines" value="SearchEngines" checked><!-- I don't know if the id and value should have hyphens -->
+
+              <input class="categ-option" type="checkbox" name="category-type" id="search-engines" value="SearchEngines" {{#if SearchEngines}} checked {{/if}}><!-- I don't know if the id and value should have hyphens -->
             <label for="category-search-engines">Search Engines</label>
           </div>
           <div>
-            <input class="categ-option" type="checkbox" name="category-type" id="shopping" value="shopping" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="shopping" value="shopping" {{#if Shopping}} checked {{/if}}>
             <label for="category-shopping">Shopping</label>
           </div>
           <div>
-            <input class="categ-option" type="checkbox" name="category-type" id="games" value="games" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="games" value="games" {{#if Games}} checked {{/if}}>
             <label for="category-games">Games</label>
           </div><div>
-            <input class="categ-option" type="checkbox" name="category-type" id="social-media" value="SocialMedia" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="social-media" value="SocialMedia" {{#if SocialMedia}} checked {{/if}}>
             <label for="category-social-media">Social Media</label>
           </div><div>
-            <input class="categ-option" type="checkbox" name="category-type" id="educational" value="Educational" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="educational" value="Educational" {{#if Educational}} checked {{/if}}>
             <label for="category-educational">Educationalr</label>
           </div><div>
-            <input class="categ-option" type="checkbox" name="category-type" id="interesting" value="Interesting" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="interesting" value="Interesting" {{#if Interesting}} checked {{/if}}>
             <label for="category-interesting">Interesting</label>
           </div><div>
-            <input class="categ-option" type="checkbox" name="category-type" id="streaming-sites" value="StreamingSites" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="streaming-sites" value="StreamingSites" {{#if StreamingSites}} checked {{/if}}>
             <label for="category-streaming-sites">Streaming Sites</label>
           </div><div>
-            <input class="categ-option" type="checkbox" name="category-type" id="wikis" value="Wikis" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="wikis" value="Wikis" {{#if Wikis}} checked {{/if}}>
             <label for="category-wikis">Wikis</label>
           </div><div>
-            <input class="categ-option" type="checkbox" name="category-type" id="funny" value="Funny" checked>
+            <input class="categ-option" type="checkbox" name="category-type" id="funny" value="Funny" {{#if Funny}} checked {{/if}}>
             <label for="category-funny">Funny</label>
           </div>
         </fieldset>

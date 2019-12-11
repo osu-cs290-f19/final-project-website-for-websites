@@ -113,7 +113,7 @@ function handleModalFilter()
 
 function applyNewCategories()
 {
-  var cats = [false, false, false, false, false, false, false, false, false]
+  var cats = ['false', 'false', 'false', 'false', 'false', 'false', 'false', 'false', 'false']
 
 
   console.log("applying new categories");
@@ -124,18 +124,19 @@ function applyNewCategories()
 
   for(i = 0; i < desCateg.length; i++)
   {
-    //console.log("desCateg[i] = ", desCateg[i]);
-    //console.log("desCateg[i].checked = ", desCateg[i].checked);
+    console.log("desCateg[i] = ", desCateg[i]);
+    console.log("desCateg[i].checked = ", desCateg[i].checked);
     if(desCateg[i].checked)
     {
-      cats[i] = true;
+      cats[i] = 'true';
     }
   }
 
-  var request = new XMLHttpRequest();
-  var requestURL = '/?' + 'searchEngines=' + cats[0] + '&shopping=' + cats[1] + '&games=' + cats[2] + '&socialMedia=' + cats[3] + '&educational=' + cats[4] + '&interesting=' + cats[5] + '&streamingSites=' + cats[6] + '&wikis=' + cats[7] + '&funny=' + cats[8];
-  request.open('GET', requestURL);
-  request.send();
+  // var request = new XMLHttpRequest();
+  // var requestURL = '/?' + 'SearchEngines=' + cats[0] + '&Shopping=' + cats[1] + '&Games=' + cats[2] + '&SocialMedia=' + cats[3] + '&Educational=' + cats[4] + '&Interesting=' + cats[5] + '&StreamingSites=' + cats[6] + '&Wikis=' + cats[7] + '&Funny=' + cats[8];
+  // request.open('GET', requestURL);
+  // request.send();
+  window.location.href = '/' + '?' + 'SearchEngines=' + cats[0] + '&Shopping=' + cats[1] + '&Games=' + cats[2] + '&SocialMedia=' + cats[3] + '&Educational=' + cats[4] + '&Interesting=' + cats[5] + '&StreamingSites=' + cats[6] + '&Wikis=' + cats[7] + '&Funny=' + cats[8];
 }
 
 function showInsertModal()
