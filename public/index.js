@@ -141,6 +141,9 @@ function applyNewCategories()
 
 function showInsertModal()
 {
+  hideCategModal();
+  hideFilterModal();
+
   var insertModal = document.getElementById('create-new-post-modal');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
@@ -169,6 +172,9 @@ function hideInsertModal()
 
 
 function showFilterModal() {
+  hideCategModal();
+  hideInsertModal();
+
   var searchModal = document.getElementById('search-something');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
@@ -194,6 +200,9 @@ function hideFilterModal()
 
 function showCategModal()
 {
+  hideFilterModal();
+  hideInsertModal();
+
   var categModal = document.getElementById('choose-categories-modal');
   var modalBackdrop = document.getElementById('modal-backdrop');
 

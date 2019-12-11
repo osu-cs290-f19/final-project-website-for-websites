@@ -33,12 +33,12 @@ var j = 0;
 
 app.get('/', function(req, res){
 
-  console.log("got a new request");
+  //console.log("got a new request");
   postDataArray = [];//empty the array
   for(i in postDataArrayAll)
     postDataArray.push(postDataArrayAll[i]);//make a deep copy of postDataArrayAll
-  console.log("postDataArrayAll = ", postDataArrayAll);
-  console.log("postDataArray = ", postDataArray);
+  //console.log("postDataArrayAll = ", postDataArrayAll);
+  //console.log("postDataArray = ", postDataArray);
 
   //var thing;
 
@@ -50,45 +50,45 @@ app.get('/', function(req, res){
     conosle.log("validCategories.req.params[i].key = ", validCategories.req.params[i].key);
     conosle.log("validCategories.req.params[i].key.value = ", validCategories.req.params[i].key.value);*/
     //thing = req.query[i].key
-    console.log("i = ", i);
-    console.log("req.query[i] = ", req.query[i]);
-    //console.log("req.query[i].key = ", req.query[i].key);
-    console.log("validCategories.SearchEngines = ", validCategories.SearchEngines);
-    console.log("validCategories[i] = ", validCategories[i]);
+    // console.log("i = ", i);
+    // console.log("req.query[i] = ", req.query[i]);
+    // //console.log("req.query[i].key = ", req.query[i].key);
+    // console.log("validCategories.SearchEngines = ", validCategories.SearchEngines);
+    // console.log("validCategories[i] = ", validCategories[i]);
     if(req.query[i] == 'true')
     {
-      console.log("req.query[i] = (should be true) ", req.query[i]);
+      // console.log("req.query[i] = (should be true) ", req.query[i]);
       validCategories[i] = true;
     }
     else
     {
-      console.log("req.query[i] = (should be false)", req.query[i]);
+      // console.log("req.query[i] = (should be false)", req.query[i]);
       validCategories[i] = false;
     }
   }
 
-  console.log("validCategories = ", validCategories);
-  console.log("postDataArray[0] = ", postDataArray[0]);
+  // console.log("validCategories = ", validCategories);
+  // console.log("postDataArray[0] = ", postDataArray[0]);
 
   var thing2;
   for(i = postDataArray.length - 1; i > -1; i--)
   {
-    console.log("i = ", i);
-    console.log("postDataArray[i] = ", postDataArray[i]);
-    console.log("postDataArray[i].category = ", postDataArray[i].category);
+    // console.log("i = ", i);
+    // console.log("postDataArray[i] = ", postDataArray[i]);
+    // console.log("postDataArray[i].category = ", postDataArray[i].category);
     thing2 = postDataArray[i].category;
     //console.log("thing = ", thing);
     //console.log("validCategories = ", validCategories);
-    console.log("thing2 = ", thing2);
-    console.log("validCategories[thing2] = ", validCategories[thing2]);
+    // console.log("thing2 = ", thing2);
+    // console.log("validCategories[thing2] = ", validCategories[thing2]);
     if(!validCategories[thing2])
     {
-      console.log("getting rid of current item");
+      // console.log("getting rid of current item");
       postDataArray.splice(i, 1);
     }
   }
 
-  console.log("postDataArray = ", postDataArray);
+  // console.log("postDataArray = ", postDataArray);
 
   res.render('body', {
     showNavbar: true,
@@ -108,7 +108,7 @@ app.get('/', function(req, res){
     Funny: validCategories.Funny
   });
 
-  console.log("postDataArray[0] = ", postDataArray[0]);
+  // console.log("postDataArray[0] = ", postDataArray[0]);
 });
 
 app.get('/posts/:postID', function(req, res, next){
