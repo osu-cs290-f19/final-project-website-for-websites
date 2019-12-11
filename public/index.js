@@ -147,10 +147,10 @@ function showInsertModal()
   var insertModal = document.getElementById('create-new-post-modal');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
-  alert("showing insert modal");
+  //alert("showing insert modal");
 
-  insertModal.classList.remove('hidden');
-  modalBackdrop.classList.remove('hidden');
+  insertModal.classList.remove('hidden-create');
+  modalBackdrop.classList.remove('hidden-create');
 }
 
 function hideInsertModal()
@@ -159,10 +159,10 @@ function hideInsertModal()
   var insertModal = document.getElementById('create-new-post-modal');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
-  insertModal.classList.add('hidden');
-  modalBackdrop.classList.add('hidden');
+  insertModal.classList.add('hidden-create');
+  modalBackdrop.classList.add('hidden-create');
 
-  alert("hiding insert modal");
+  //alert("hiding insert modal");
 
   document.getElementById('post-title-input').value = "";
   document.getElementById('post-link-input').value = "";
@@ -178,10 +178,10 @@ function showFilterModal() {
   var searchModal = document.getElementById('search-something');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
-  alert("showing filter modal");
+  //alert("showing filter modal");
 
-  searchModal.classList.remove('hidden');
-  modalBackdrop.classList.remove('hidden');
+  searchModal.classList.remove('hidden-filter');
+  modalBackdrop.classList.remove('hidden-create');
 }
 
 function hideFilterModal()
@@ -189,10 +189,10 @@ function hideFilterModal()
   var searchModal = document.getElementById('search-something');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
-  alert("hiding filter modal");
+  //alert("hiding filter modal");
 
-  searchModal.classList.add('hidden');
-  modalBackdrop.classList.add('hidden');
+  searchModal.classList.add('hidden-filter');
+  modalBackdrop.classList.add('hidden-create');
 
   document.getElementById('search-text-input').value = "";
 }
@@ -206,10 +206,10 @@ function showCategModal()
   var categModal = document.getElementById('choose-categories-modal');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
-  alert("showing categories modal");
+  //alert("showing categories modal");
 
-  categModal.classList.remove('hidden');
-  modalBackdrop.classList.remove('hidden');
+  categModal.classList.remove('hidden-categ');
+  modalBackdrop.classList.remove('hidden-create');
 }
 
 function hideCategModal()
@@ -218,10 +218,10 @@ function hideCategModal()
   var categModal = document.getElementById('choose-categories-modal');
   var modalBackdrop = document.getElementById('modal-backdrop');
 
-  alert("hiding categories modal");
+  //alert("hiding categories modal");
 
-  categModal.classList.add('hidden');
-  modalBackdrop.classList.add('hidden');
+  categModal.classList.add('hidden-categ');
+  modalBackdrop.classList.add('hidden-create');
 }
 
 
